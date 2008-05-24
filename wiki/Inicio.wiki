@@ -7,9 +7,9 @@
 
 = Detales =
 
-http://www.inforg.uniovi.es
+Tronco principal en: http://paccogfutils.googlecode.com/svn/trunk/
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+#Add your content here.  Format your content with:
+#  * Text in *bold* or _italic_
+#  * Headings, paragraphs, and lists
+#  * Automatic links to other wiki pages
