@@ -1,16 +1,2 @@
 #summary http://paccogfutils.googlecode.com/svn/trunk/
-
-El enlace importante a el tronco / raiz de el SVN.
-
-= Introduccion =
-
-¡Bienvenido a mi página de chapuzas!.
-
-= Detalles =
-
-Tronco principal en: http://paccogfutils.googlecode.com/svn/trunk/
-
-#Add your content here.  Format your content with:
-#  * Text in *bold* or _italic_
-#  * Headings, paragraphs, and lists
-#  * Automatic links to other wiki 
+http://paccogfutils.googlecode.com/svn/trunk/
