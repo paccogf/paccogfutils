@@ -1,0 +1,36 @@
+# Project: NetKat
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = netkat.o mytcp.o myparser.o $(RES)
+LINKOBJ  = netkat.o mytcp.o myparser.o $(RES)
+LIBS =  -L"C:/cygwin/usr/lib"  
+INCS =  -I"C:/cygwin/usr/include" 
+CXXINCS =  -I"C:/cygwin/usr/include"  -I"C:/cygwin/usr/include/c++/3.3.3" 
+BIN  = nk.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS) -I.  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before nk.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "nk.exe" $(LIBS)
+
+netkat.o: netkat.c
+	$(CC) -c netkat.c -o netkat.o $(CFLAGS)
+
+mytcp.o: mytcp.c
+	$(CC) -c mytcp.c -o mytcp.o $(CFLAGS)
+
+myparser.o: myparser.c
+	$(CC) -c myparser.c -o myparser.o $(CFLAGS)
