@@ -1,4 +1,6 @@
-#summary El enlace importante a el tronco / raiz de el SVN.
+#summary http://paccogfutils.googlecode.com/svn/trunk/
+
+El enlace importante a el tronco / raiz de el SVN.
 
 = Introduccion =
 
