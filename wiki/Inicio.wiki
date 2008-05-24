@@ -5,9 +5,9 @@
 ¡Bienvenido a mi página de chapuzas!.
 
 
-= Details =
+= Detales =
 
-_*SUPERITALICBOLD*_
+http://www.inforg.uniovi.es
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
