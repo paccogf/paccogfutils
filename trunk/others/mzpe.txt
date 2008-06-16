@@ -1,0 +1,13 @@
+$$.foreach ( place1 { s-[1]w 0xf780a000 L?7000000 0x5A4D } ) 
+$${
+  $$ .foreach /pS 1 /ps 1 ( place2 { dw ( place1 + 0x3c) L1 } )
+   $${ 
+    $$  s -w ( place1 + place2 ) L1 0x4550
+   $$}
+$$   .printf "encontrado\n"
+$$}
+
+.foreach ( place1 { s-[1]w 0xf780a000 L?7000000 0x5A4D } )
+{
+.printf "encontrado\n"
+}
