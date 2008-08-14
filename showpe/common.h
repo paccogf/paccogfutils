@@ -18,6 +18,6 @@ typedef struct {
 
 extern ProgArgs gProgArgs;
 
-char * GetMD5String(BYTE *buffer, int size, char *literal);
+char * GetMD5(BYTE *buffer, int size, char *literal);
 
 #endif

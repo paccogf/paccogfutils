@@ -23,6 +23,8 @@ char gszTEXT[] =            "TEXT";
 char gszFORMAT_INTEGER[] =  "%d";
 char gszFORMAT_STRING[] =   "'%s'";
 
+
+
 /*********************************  FUNCIONES Y TIPOS DE DATOS PARA LA TABLA PRINCIPAL ***************************/
 
 
@@ -36,6 +38,12 @@ char *gColsForFileTable = NULL; // ALMACENA LAS COLUMNAS DE LA TABLA DE FICHEROS
 char *gColsForSectionTable = NULL; // IDEM CON LAS DE LA TABLA DE SECCIONES
 int gID = 0;
 
+
+/*******************************************************/
+//      CADA VEZ QUE SE AÑADA UN CAMPO NUEVO A CUALQUIERA DE LAS 2 TABLAS SIGUIENTES, HAY QUE INCLUIRLO
+//      EN LA DEFINICION DE LA TABLA ASI COMO EN LA FUNCION QUE SIRVE PARA ASIGNAR VALORES A DICHA TABLA
+//
+/*******************************************************/
 
 
 // TABLA DE FICHEROS CON REPRESENTACION PARA CADA CAMPO DE: NOMBRE, TIPO, CASTING CON sprintf Y VALOR
@@ -63,7 +71,7 @@ SQLAssociation gFileTable[] = {
     { "nStartPESection",        gszINTEGER, gszFORMAT_INTEGER,  0 }, // dfa->nStartPEsection
     { "StartPE",                gszINTEGER, gszFORMAT_INTEGER,  0 }, // dfa->StartPE
     { "OVLSize",                gszINTEGER, gszFORMAT_INTEGER,  0 }, // dfa->StartPE
-    { "MD5",                    gszTEXT,    gszFORMAT_STRING,   0 },
+    { "MD5",                    gszTEXT,    gszFORMAT_STRING,    (DWORD) gszMD5},
 
 };
 
@@ -103,11 +111,14 @@ int nsections = PEInfo->PE->FileHeader.NumberOfSections;
     gFileTable[i++].value = (DWORD) (PEInfo->size - PEInfo->section[nsections-1].PointerToRawData - PEInfo->section[nsections-1].SizeOfRawData);
 	
     // CALCULO Y ASIGNACION DEL MD5
-	if(!gProgArgs.bNoMD5)
+	if(!gProgArgs.bNoMD5) 
     {
-        gFileTable[i++].value = (DWORD) GetMD5String(gMap, gMapSize, (char *) gszMD5); 
+        GetMD5(gMap, gMapSize, (char *) gFileTable[i++].value);
     }
-    
+    else // SI HEMOS ESPECIFICADO "-noMD5" DEVOLVEMOS CADENA VACIA ""
+    {
+        ((char *)(gFileTable[i++].value))[0]=0;
+    }
   
 
 
@@ -120,14 +131,18 @@ return gFileTable;
 // REPRESENTACION DE LA TABLA DE SECCIONES DE UN EJECUTABLE
 SQLAssociation gSectionTable[] = {
     
-    { "Id",                 gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "Pos",                gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "Name",               gszTEXT,    "'%.8s'",           0 },
-    { "VirtualSize",        gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "VirtualAddress",     gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "SizeOfRawData",      gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "PointerToRawData",   gszINTEGER, gszFORMAT_INTEGER,  0 },
-    { "Characteristics",    gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "Id",                     gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "Pos",                    gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "Name",                   gszTEXT,    "'%.8s'",           0 },
+    { "VirtualSize",            gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "VirtualAddress",         gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "SizeOfRawData",          gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "PointerToRawData",       gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "Characteristics",        gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "PointerToRelocations",   gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "NumberOfRelocations",    gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "PointerToLinenumbers",   gszINTEGER, gszFORMAT_INTEGER,  0 },
+    { "NumberOfLinenumbers",    gszINTEGER, gszFORMAT_INTEGER,  0 },
     
 
 };
@@ -149,6 +164,10 @@ int i=0;
     gSectionTable[i++].value = (DWORD) section->SizeOfRawData;
     gSectionTable[i++].value = (DWORD) section->PointerToRawData;
     gSectionTable[i++].value = (DWORD) section->Characteristics;
+    gSectionTable[i++].value = (DWORD) section->PointerToRelocations;
+    gSectionTable[i++].value = (DWORD) section->NumberOfRelocations;
+    gSectionTable[i++].value = (DWORD) section->PointerToLinenumbers;
+    gSectionTable[i++].value = (DWORD) section->NumberOfLinenumbers;
     
     
 
