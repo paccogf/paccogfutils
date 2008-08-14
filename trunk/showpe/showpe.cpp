@@ -40,7 +40,7 @@ char *opt;
         {
             opt=argv[i]+1;
             
-            if(!strcmp(opt, "-recursive") || !strcmp(opt, "r"))
+            if(!strcmp(opt, "r"))
             {
                 gProgArgs.bRecursive = TRUE; // "-r" 
 
@@ -58,6 +58,7 @@ char *opt;
             else
             {
                 printf("\nOpcion no reconocida: %s\n\n", argv[i]);
+                show_help();
                 exit(1);
             }
         }
@@ -80,7 +81,7 @@ return;
 }
 
 
-char * GetMD5String(BYTE *buffer, int size, char *literal)
+char * GetMD5(BYTE *buffer, int size, char *literal)
 {
 md5_state_t state;
 md5_byte_t digest[16];
@@ -104,16 +105,14 @@ int main(int argc, char *argv[])
 {
 
 GetProgArgs(argc, argv);
-if(gProgArgs.szDBFile == NULL || gProgArgs.szPathSpec == NULL)
+if(argc < 3)
 {
-
-    printf("No se especifico <database> o <ficheros>\n");
-    exit(-1);
+    show_help();
+    return 0;
 }
 
 
-
-
+GetProgArgs(argc, argv);
 
 SQLiteProcess();
 
