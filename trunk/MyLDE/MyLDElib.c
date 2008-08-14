@@ -14,8 +14,9 @@
 /*#define SET_PREFIX(prefix) prefix=TRUE;\
                              finished=(b66Prefix || b67Prefix)? FALSE: TRUE;\
                              opcode++; */
-
-
+#ifdef __cplusplus
+extern "C"
+#endif
 //int LDE_Size(BYTE *opcode)
 int LDE_Size(BYTE *opcode, DWORD *status)  // AÑADIDO PARAMETRO status -> MULTITHREAD-SAFE
 {
@@ -662,20 +663,21 @@ if(finished)
         opcode++;  // ACTUALIZAMOS OPSIZE PARA APUNTAR AL BYTE MOD-REG-RM
         opsize++;  // ACTUALIZAMOS OPSIZE PARA INCLUIR TAMAÑO CON EL BYTE MOD-REG-RM
 
-        if(*opcode < 0xC0)   // MOD REG R/M (MOD BYTE <3)
+        if(*opcode < 0xC0)   // MOD REG R/M (MOD BITS <3)
         {
             if(((*opcode & 0x07) == SIB_BYTE) && !CHECK_PREFIX(LDE_67)) // SIB BYTE PRESENTE
             {
                 opsize++;
                 if((*(opcode+1) & 0x07) == 5)  // EXCEPTO ESTOS CASOS  
                 {
-                    switch(*(opcode+1) & 0xC0)
+                    //switch(*(opcode+1) & 0xC0)
+                    switch(*opcode & 0xC0)
                     {
                         case 0x00:
-                        case 0x80:  opsize+=4;
+                        case 0x80:  //opsize+=4;
                                     break;
                         
-                        case 0x40:  opsize++;
+                        case 0x40:  //opsize++;
                                     break;
 
                         default:    return 0;  // AL CARAJO
