@@ -680,8 +680,9 @@ Public License instead of this License.  But first, please read
 #include <windows.h>
 #include <stdio.h> 
 
-#define _DIRRUN_H_MAX_PATH (MAX_PATH * 5) 
 
+#define _DIRRUN_H_MAX_PATH (MAX_PATH * 5) 
+#define INVALID_FILE_ATTRIBUTES ((DWORD)-1)
 
 typedef int  (* DirEntryFunc)(char *, void *); 
 

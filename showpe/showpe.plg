@@ -3,40 +3,745 @@
 <pre>
 <h1>Build Log</h1>
 <h3>
---------------------Configuration: showpe - Win32 Debug--------------------
+--------------------Configuration: showpe - Win32 Release--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSP6C.tmp" with contents
+Creating temporary file "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9C.tmp" with contents
 [
-/nologo /MLd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fr"Debug/" /Fp"Debug/showpe.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+/nologo /ML /W4 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Release/" /Fp"Release/showpe.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\BACKUPS\resul\ShowPE\csvstuff.cpp"
+"D:\BACKUPS\resul\ShowPE\dirrun.cpp"
+"D:\BACKUPS\resul\ShowPE\md5.c"
+"D:\BACKUPS\resul\ShowPE\showpe.cpp"
+"D:\BACKUPS\resul\ShowPE\sqlite3.c"
 "D:\BACKUPS\resul\ShowPE\sqlstuff.cpp"
+"D:\BACKUPS\resul\ShowPE\Xinf.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSP6C.tmp" 
-Creating temporary file "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSP6D.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9C.tmp" 
+Creating temporary file "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9D.tmp" with contents
 [
-kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/showpe.pdb" /debug /machine:I386 /out:"Debug/showpe.exe" /pdbtype:sept 
-.\Debug\csvstuff.obj
-.\Debug\dirrun.obj
-.\Debug\md5.obj
-.\Debug\showpe.obj
-.\Debug\sqlite3.obj
-.\Debug\sqlstuff.obj
-.\Debug\Xinf.obj
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/showpe.pdb" /machine:I386 /out:"Release/showpe.exe" 
+.\Release\csvstuff.obj
+.\Release\dirrun.obj
+.\Release\md5.obj
+.\Release\showpe.obj
+.\Release\sqlite3.obj
+.\Release\sqlstuff.obj
+.\Release\Xinf.obj
 ]
-Creating command line "link.exe @C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSP6D.tmp"
+Creating command line "link.exe @C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9D.tmp"
 <h3>Output Window</h3>
 Compiling...
-sqlstuff.cpp
+csvstuff.cpp
+dirrun.cpp
+md5.c
+showpe.cpp
+sqlite3.c
+D:\BACKUPS\resul\ShowPE\sqlite3.c(583) : warning C4132: 'sqlite3_version' : const object should be initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(6292) : warning C4132: 'sqlite3one' : const object should be initialized
+C:\Archivos de programa\Microsoft Visual Studio\VC98\INCLUDE\rpcasync.h(45) : warning C4115: '_RPC_ASYNC_STATE' : named type definition in parentheses
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9389) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9418) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9419) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9528) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9529) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9532) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9533) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9534) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9535) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9550) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9551) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9553) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9596) : warning C4244: 'initializing' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9602) : warning C4244: '=' : conversion from 'double ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9664) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9713) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9719) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9811) : warning C4244: '+=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9817) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(9823) : warning C4244: '+=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10024) : warning C4244: 'function' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10055) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10081) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10100) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10099) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10113) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10112) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10126) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10125) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10557) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10606) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10830) : warning C4244: 'return' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(13347) : warning C4100: 'p' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(13424) : warning C4100: 'inUse' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(13423) : warning C4100: 'NotUsed' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(13447) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(13456) : warning C4100: 'n' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14055) : warning C4244: 'initializing' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14142) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14148) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14164) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14174) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14188) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14211) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14214) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14215) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14250) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14252) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14275) : warning C4244: 'initializing' : conversion from 'const int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14293) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14294) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14611) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14614) : warning C4244: '+=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14626) : warning C4244: '+=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14629) : warning C4244: '+=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14644) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15358) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15365) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15376) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15382) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15534) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15733) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(15903) : warning C4244: '=' : conversion from 'long double ' to 'double ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16088) : warning C4244: '=' : conversion from 'unsigned __int64 ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16091) : warning C4244: '=' : conversion from 'unsigned __int64 ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16098) : warning C4244: '=' : conversion from 'unsigned __int64 ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16198) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16199) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16200) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16201) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16238) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16369) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(16373) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21714) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21715) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21747) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21748) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21779) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21780) : warning C4244: 'initializing' : conversion from '__int64 ' to 'long ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21801) : warning C4100: 'flags' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21853) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22001) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22065) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22092) : warning C4100: 'id' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22099) : warning C4100: 'id' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22150) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22277) : warning C4100: 'syncDir' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22275) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22310) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22349) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22403) : warning C4100: 'nFull' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22467) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22485) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22512) : warning C4152: nonstandard extension, function/data pointer conversion in expression
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22505) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22515) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22529) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22560) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22578) : warning C4100: 'pVfs' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(23751) : warning C4018: '>=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(23768) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24007) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24291) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24424) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24430) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24619) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24641) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24654) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24669) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24781) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24797) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24855) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24856) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24857) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25006) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25081) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25082) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25096) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25100) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25101) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25102) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25104) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25105) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25192) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25304) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25311) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25313) : warning C4244: 'return' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25397) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25442) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(25836) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26482) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26514) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26540) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26990) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26996) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(27108) : warning C4018: '!=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(27422) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(27423) : warning C4018: '!=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(27911) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(28001) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29295) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29297) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29561) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29567) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29573) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29592) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29594) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29596) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29597) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29703) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29703) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29706) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29706) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29742) : warning C4244: '-=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29755) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29758) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29758) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29778) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29778) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29817) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29817) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29818) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29818) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29819) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29819) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29820) : warning C4244: '+=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29833) : warning C4244: '-=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29834) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29834) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29835) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29835) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29847) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29847) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29860) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29861) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29862) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29863) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29867) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29868) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29871) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29872) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29874) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29925) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29927) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29955) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29981) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29985) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29985) : warning C4244: '=' : conversion from 'unsigned short ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29986) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29988) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29989) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30025) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30073) : warning C4100: 'pageSize' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30095) : warning C4100: 'pageSize' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30109) : warning C4100: 'n' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30246) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30247) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30275) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30276) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30279) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30290) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30379) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30538) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30541) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30592) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30657) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30661) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30662) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30670) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30671) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30776) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30776) : warning C4244: '=' : conversion from 'unsigned short ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30779) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30901) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(30963) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31025) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31135) : warning C4018: '!=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31208) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31270) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31276) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31276) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31279) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31634) : warning C4100: 'NotUsed' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31734) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31965) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31969) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32086) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32091) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32287) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32294) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32347) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32451) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32642) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32642) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32644) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32646) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32647) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32647) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32908) : warning C4018: '<=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33044) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33081) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33093) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33226) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33297) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33299) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33316) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33322) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33335) : warning C4244: 'initializing' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33400) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33476) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33476) : warning C4244: '=' : conversion from 'unsigned short ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33527) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33557) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33557) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33558) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33558) : warning C4244: '=' : conversion from 'unsigned short ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33608) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33608) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33613) : warning C4244: '-=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33615) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33615) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33622) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33898) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(33980) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(34015) : warning C4244: '-=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(34830) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(34941) : warning C4018: '>' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35061) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35104) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35211) : warning C4244: '=' : conversion from 'unsigned int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35470) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35655) : warning C4018: '!=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35659) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(35867) : warning C4244: 'initializing' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36116) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36216) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36224) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36225) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36466) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36569) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36722) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36723) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36724) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36777) : warning C4244: '=' : conversion from 'const __int64 ' to 'double ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(36782) : warning C4244: '=' : conversion from 'const __int64 ' to 'double ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(37121) : warning C4244: 'return' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(37279) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(37662) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(37698) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(37876) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(38212) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(38278) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(38924) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(38996) : warning C4244: 'return' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39012) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39119) : warning C4244: '=' : conversion from 'unsigned __int64 ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39133) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39305) : warning C4018: '>=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39307) : warning C4018: '>=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39333) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39335) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39382) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39423) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39597) : warning C4244: 'return' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39758) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39775) : warning C4244: '=' : conversion from 'double ' to '__int64 ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39791) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39804) : warning C4244: '=' : conversion from 'double ' to 'unsigned __int64 ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39901) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(39900) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(40336) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(40781) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41133) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41135) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41567) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41568) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41578) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41654) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41673) : warning C4244: '=' : conversion from '__int64 ' to 'double ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41681) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41763) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41772) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41774) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41861) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41904) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41925) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(41983) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42141) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42150) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42171) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42220) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42223) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42374) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42407) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42472) : warning C4018: '>=' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42490) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42507) : warning C4018: '<' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42669) : warning C4244: '+=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42692) : warning C4244: 'function' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42704) : warning C4244: 'function' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42709) : warning C4244: '=' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42760) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42761) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42785) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42889) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42916) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(42920) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43056) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43094) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43095) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43108) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43109) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43183) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43287) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43302) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43538) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43566) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43719) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43797) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43941) : warning C4244: '=' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43952) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(43991) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44033) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44081) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44087) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44133) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44229) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44341) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44410) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44551) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44557) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44594) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44796) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44798) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44862) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44930) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44932) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44985) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44986) : warning C4244: '=' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(44998) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45005) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45034) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45036) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45037) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45073) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45075) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45087) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45122) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45129) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45154) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45158) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45206) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(45210) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(46049) : warning C4244: 'return' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(46100) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(46158) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(46185) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(46355) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(47312) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(47314) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(47517) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(47670) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(47784) : warning C4100: 'n' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(48125) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(48960) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(49015) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(49628) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(49909) : warning C4100: 'azNotUsed' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(49909) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(50044) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(50215) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(50316) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(50776) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(50820) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51372) : warning C4018: '==' : signed/unsigned mismatch
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51373) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51492) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51497) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51515) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51521) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51723) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51900) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(51901) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52649) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52716) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52727) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52936) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52937) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52938) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(52964) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53205) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53221) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53260) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53261) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53313) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(53583) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(54008) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(54041) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(54518) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(54667) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55196) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55216) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55250) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55343) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55398) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55418) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55450) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55449) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55465) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55493) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55492) : warning C4100: 'arg' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55506) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55505) : warning C4100: 'arg' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55519) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55518) : warning C4100: 'arg' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55764) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55780) : warning C4100: 'argv' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55779) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55853) : warning C4244: 'function' : conversion from 'unsigned __int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55876) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55916) : warning C4244: 'function' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55907) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(55928) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56041) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56347) : warning C4244: 'initializing' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56348) : warning C4244: 'initializing' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56349) : warning C4244: 'initializing' : conversion from '__int64 ' to 'int ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56350) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56334) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56413) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(56644) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(58009) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(57966) : warning C4100: 'rowidChng' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(58443) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59214) : warning C4055: 'type cast' : from data pointer 'void *' to function pointer 'int (__cdecl *)(struct sqlite3 *,char ** ,const struct sqlite3_api_routines *)'
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59367) : warning C4055: 'type cast' : from data pointer 'void *' to function pointer 'int (__cdecl *)(struct sqlite3 *,char ** ,const struct sqlite3_api_routines *)'
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59522) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59793) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59828) : warning C4244: '=' : conversion from 'int ' to 'char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59963) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59963) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59963) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(59994) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60253) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60285) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60432) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60656) : warning C4100: 'azColName' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60656) : warning C4100: 'argc' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60780) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60811) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(60894) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(61120) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(61147) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(61201) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(61433) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(61474) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(62888) : warning C4100: 'idx' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(63408) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(63413) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(63952) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64009) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64041) : warning C4100: 'pParse' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64282) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64449) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64908) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(64912) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(65466) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(65467) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(65537) : warning C4049: compiler limit : terminating line number emission
+D:\BACKUPS\resul\ShowPE\sqlite3.c(65892) : warning C4100: 'pParse' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68119) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68267) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68268) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68271) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68272) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68280) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68626) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68627) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68628) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68643) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68653) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68654) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68657) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68679) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68750) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68794) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68804) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68805) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68834) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68835) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(68837) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(69187) : warning C4244: '=' : conversion from 'unsigned short ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(69253) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(69452) : warning C4244: 'function' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(69723) : warning C4244: 'function' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(70350) : warning C4244: 'function' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(70391) : warning C4244: 'function' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(72075) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(72138) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(72188) : warning C4100: 'yypMinor' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(72918) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(72979) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73053) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73059) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73397) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73409) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73597) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73644) : warning C4100: 'yymajor' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73733) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(73820) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(74361) : warning C4127: conditional expression is constant
+D:\BACKUPS\resul\ShowPE\sqlite3.c(74848) : warning C4100: 'NotUsed' : unreferenced formal parameter
+D:\BACKUPS\resul\ShowPE\sqlite3.c(75254) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(75266) : warning C4244: 'function' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(75276) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(75676) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\BACKUPS\resul\ShowPE\sqlite3.c(84546) : warning C4505: 'sqlite3FaultStep' : unreferenced local function has been removed
+        D:\BACKUPS\resul\ShowPE\sqlite3.c(9121) : see declaration of 'sqlite3FaultStep'
+D:\BACKUPS\resul\ShowPE\sqlite3.c(84546) : warning C4505: 'mutexIsNT' : unreferenced local function has been removed
+        D:\BACKUPS\resul\ShowPE\sqlite3.c(13225) : see declaration of 'mutexIsNT'
+D:\BACKUPS\resul\ShowPE\sqlite3.c(10024) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(14021) : warning C4701: local variable 'xtype' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(21769) : warning C4701: local variable 'wrote' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(22341) : warning C4701: local variable 'rc' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-29312) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24424) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(24430) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29295) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(29297) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(26394) : warning C4701: local variable 'pData' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(31998) : warning C4701: local variable 'rc' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32642) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32642) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32644) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32646) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32647) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32647) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-29420) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-25776) : warning C4702: unreachable code
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-25200) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-23968) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-22844) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-22832) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-20979) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-21195) : warning C4701: local variable 'pOut' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-23239) : warning C4701: local variable 'pIn1' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-20880) : warning C4701: local variable 'pIn2' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-21258) : warning C4701: local variable 'pIn3' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-22954) : warning C4701: local variable 'sMem' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-23046) : warning C4701: local variable 'avail' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-21826) : warning C4701: local variable 'res' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-21665) : warning C4701: local variable 'iKey' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(32500) : warning C4701: local variable 'pPage' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-32214) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-26154) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-26113) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-20079) : warning C4702: unreachable code
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10193) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9683) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9620) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9473) : warning C4701: local variable 'aLen' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9465) : warning C4701: local variable 'azChar' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9481) : warning C4701: local variable 'len' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-9469) : warning C4701: local variable 'len' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-4415) : warning C4702: unreachable code
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-4386) : warning C4702: unreachable code
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-15908) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-15220) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-17411) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-17266) : warning C4701: local variable 'pTest' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-19378) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-18224) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-18222) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-18461) : warning C4701: local variable 'piColMask' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10869) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10579) : warning C4701: local variable 'iBeginBeforeTrigger' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10578) : warning C4701: local variable 'iEndBeforeTrigger' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10556) : warning C4701: local variable 'iBeginAfterTrigger' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-10555) : warning C4701: local variable 'iEndAfterTrigger' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-7995) : warning C4701: local variable 'regFromSelect' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-7687) : warning C4701: local variable 'j2' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-7527) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-5251) : warning C4761: integral size mismatch in argument; conversion supplied
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-551) : warning C4701: local variable 'pTabList' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-551) : warning C4701: local variable 'pEList' may be used without having been initialized
+D:\BACKUPS\resul\ShowPE\sqlite3.c(-1254) : warning C4761: integral size mismatch in argument; conversion supplied
+warning C4701: local variable 'iBeginBeforeTrigger' may be used without having been initialized
+warning C4701: local variable 'iEndBeforeTrigger' may be ussqlstuff.cpp
+ed without having been initialized
+warning C4701: local variable 'iBeginAfterTrigger' may be used without having been initialized
+warning C4701: local variable 'iEndAfterTrigger' may be used without having been initialized
+warning C4701: local variable 'pArg' may be used without having been initialized
+warning C4701: local variable 'xFunc' may be used without having been initialized
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
+warning C4761: integral size mismatch in argument; conversion supplied
 D:\BACKUPS\resul\ShowPE\sqlstuff.cpp(254) : warning C4100: 'NotUsed' : unreferenced formal parameter
+Xinf.cpp
 Linking...
-Creating command line "bscmake.exe /nologo /o"Debug/showpe.bsc"  .\Debug\csvstuff.sbr .\Debug\dirrun.sbr .\Debug\md5.sbr .\Debug\showpe.sbr .\Debug\sqlite3.sbr .\Debug\sqlstuff.sbr .\Debug\Xinf.sbr"
+Creating command line "bscmake.exe /nologo /o"Release/showpe.bsc"  .\Release\csvstuff.sbr .\Release\dirrun.sbr .\Release\md5.sbr .\Release\showpe.sbr .\Release\sqlite3.sbr .\Release\sqlstuff.sbr .\Release\Xinf.sbr"
 Creating browse info file...
 <h3>Output Window</h3>
+Creating temporary file "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9F.bat" with contents
+[
+@echo off
+del /f showpe.exe
+upx release\showpe.exe -oshowpe.exe
+copy /y showpe.exe d:\util\showpe.exe
+]
+Creating command line "C:\DOCUME~1\FGONZA~1\CONFIG~1\Temp\RSPA9F.bat"
+
+No se encuentra D:\BACKUPS\resul\ShowPE\showpe.exe
+                     Ultimate Packer for eXecutables
+   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004
+UPX 1.25w        Markus F.X.J. Oberhumer & Laszlo Molnar        Jun 29th 2004
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+    315392 ->    168448   53.41%    win32/pe     showpe.exe
+
+Packed 1 file.
+        1 archivos copiados.
 
 
 
 <h3>Results</h3>
-showpe.exe - 0 error(s), 1 warning(s)
+showpe.exe - 0 error(s), 672 warning(s)
 </pre>
 </body>
 </html>
