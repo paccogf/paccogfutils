@@ -9,6 +9,8 @@
 #include "sqlstuff.h"
 //#include "csvstuff.h"
 
+#define INVALID_FILE_ATTRIBUTES ((DWORD)-1)
+
 ProgArgs gProgArgs = { FALSE, FALSE, NULL, NULL };
 
 
