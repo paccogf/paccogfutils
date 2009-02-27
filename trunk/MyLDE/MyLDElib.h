@@ -2,9 +2,6 @@
 #define _MyLDElib_h_
 #include <windows.h>
 
-
-
-
 #define LDE_ES      1
 #define LDE_CS      2
 #define LDE_SS      4
@@ -17,7 +14,9 @@
 #define LDE_66      512  // TAMAÑO OPERANDO
 #define LDE_67      1024 // TAMAÑO DE DIRECCION
 
-
+#ifdef __cplusplus
+extern "C"
+#endif
 //int LDE_Size(BYTE *);
 int LDE_Size(BYTE *, DWORD *);
 

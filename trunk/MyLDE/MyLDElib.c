@@ -300,7 +300,7 @@ switch(*opcode)
  
     // TEST, MUL, NOT, NEG, DIV, IDIV, IMUL.. DEPENDIENDO DEL VALOR DEL BYTE 
    
-                // INMEDIATO DE TAMAÑO BYTE
+                 // INMEDIATO DE TAMAÑO BYTE
     case 0x80:  // XOR, AND, SUB...
     case 0x82:  // XOR, AND, SUB...
     case 0x83:  // XOR, AND, SUB...
@@ -466,12 +466,36 @@ switch(*opcode)
     case 0xD1: 
     case 0xD2:
     case 0xD3:
-   
-    case 0xFE:  // DEC
-    case 0xFF:  // CALL INDIRECTO ... !!!!!!!!!!???????????????????
-                
                 bModRegRM=TRUE;
                 break;
+   
+    case 0xFE:  // DEC
+                // CODIFICACIONES INVALIDAS
+                if(opcode[1] >= 0xD0)
+                {
+                    opsize=0;
+                    *status=0;
+                    finished=TRUE;
+                }
+                else
+                    bModRegRM=TRUE;
+                break;
+                
+                
+    case 0xFF:  
+                // CALL INDIRECTO ... !!!!!!!!!!???????????????????
+                // DEC
+                // CODIFICACIONES INVALIDAS DEL BYTE MOD/REG PARA ESTE OPCODE
+                if((opcode[1] >= 0xD8) && (opcode[1] & 0x08))
+                {
+                    opsize=0;
+                    *status=0;
+                    finished=TRUE;
+                }
+                else
+                    bModRegRM=TRUE;
+                break;
+                
     /*******************************************************************************/
 
 
