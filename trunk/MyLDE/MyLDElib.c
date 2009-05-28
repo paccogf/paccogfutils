@@ -1,5 +1,22 @@
 #include "MyLDElib.h"
 
+//
+//
+//	TO DO:  INCLUIR CHEQUEOS SOBRE CODIFICACIONES INVALIDAS DEL BYTE ModR/M DE 
+//			ALGUNOS OPCODES
+//
+//	DONE:	GRUPO 3-1A DEL MANUAL DE INTEL
+//
+//
+
+
+#define SIB_BYTE 0x04    
+
+#define SET_PREFIX(prefix) *status|=(prefix);\
+	finished = FALSE;
+
+#define CHECK_PREFIX(prefix) ((*status) & (prefix))
+
 
 
 // DEVUELVE 0 SI ESE PREFIJO ESTABA YA FIJADO
@@ -20,12 +37,6 @@ extern "C"
 //int LDE_Size(BYTE *opcode)
 int LDE_Size(BYTE *opcode, DWORD *status)  // AÑADIDO PARAMETRO status -> MULTITHREAD-SAFE
 {
-#define SIB_BYTE 0x04    
-
-#define SET_PREFIX(prefix) *status|=(prefix);\
-                           finished = FALSE;
-
-#define CHECK_PREFIX(prefix) ((*status) & (prefix))
 
 
 register int opsize=0;
@@ -501,13 +512,34 @@ switch(*opcode)
 
     // CODIFICACION ESPECIAL PARA NOT, NEG, TEST, MUL, DIV, IMUL, IDIV
     case 0xF6:  // ESTE CASO NO TIENE INMEDIATO
+					/*
+					ESTA CODIFICACION DEL BYTE ModR/M ES INVALIDA PARA ESTE OPCODE
+					*/
+					if((opcode[1] & 0x38) == 0x08)	
+					{								
+						opsize=0;
+						*status=0;
+						finished=TRUE;
+						break;
+					}
                 if((*(opcode+1) & 0x38) == 0) opsize++; // TEST CON INMEDIATO DE 1 BYTE
                 bModRegRM=TRUE;
                 break;
                 
 
     case 0xF7:  // IDIV EAX, REG
-                if((*(opcode+1) & 0x38) == 0) opsize += CHECK_PREFIX(LDE_66)? 2: 4; // TEST CON INMEDIATO DE 1 BYTE
+					/*
+					ESTA CODIFICACION DEL BYTE ModR/M ES INVALIDA PARA ESTE OPCODE
+					*/
+					if((opcode[1] & 0x38) == 0x08)	
+					{								
+						opsize=0;
+						*status=0;
+						finished=TRUE;
+						break;
+					}
+
+					if((opcode[1] & 0x38) == 0) opsize += CHECK_PREFIX(LDE_66)? 2: 4; // TEST CON INMEDIATO DE 1 BYTE
                 bModRegRM=TRUE;
                 break;
 
@@ -633,6 +665,7 @@ switch(*opcode)
 
                     case 0xBE:  // MOVSX
                     case 0xBF:
+		    case 0x1F:
                                 //opcode++;
                                 bModRegRM=TRUE;
                                 break;
@@ -748,9 +781,6 @@ if(finished)
 
 }
 return opsize;
-#undef SET_PREFIX
-#undef CHECK_PREFIX
-#undef SIB_BYTE
 }
 
 
