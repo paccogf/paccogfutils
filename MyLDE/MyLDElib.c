@@ -567,6 +567,7 @@ switch(*opcode)
 
                     case 0xA0:  // PUSH FS
                     case 0xA1:  // POP FS
+                    case 0xA2:  // CPUID
                     case 0xA8:  // PUSH GS
                     case 0xA9:  // POP GS
 
@@ -665,9 +666,9 @@ switch(*opcode)
 
                     case 0xBE:  // MOVSX
                     case 0xBF:
-		    case 0x1F:
+					case 0x1F:
                                 //opcode++;
-                                bModRegRM=TRUE;
+                                bModRegRM = TRUE;
                                 break;
 
 
