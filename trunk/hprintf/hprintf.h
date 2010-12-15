@@ -1,8 +1,11 @@
 #ifndef _HPRINTF_H_
 #define _HPRINTF_H_
-#include <stdio.h>
 
-int hprintf(char * format)
+#include <stdio.h>
+#include <stdarg.h>
+
+static
+int hprintf(char *format)
 {
 int i;
 static char _default_indent_char_ = '\t';  // TIENE QUE SER UN CARACTER (DE MOMENTO)
@@ -47,4 +50,4 @@ int indentation_delta = 0;
 return _indentation_level_;
 }
 
-#define
+#endif
