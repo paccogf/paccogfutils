@@ -122,7 +122,7 @@ char message[] = "Hello, world";
 
 
 
-	rc4ctx = RC4_Init("", sizeof(key)-1);
+	rc4ctx = RC4_Init(key, sizeof(key)-1);
 	
 	RC4_Crypt(rc4ctx, message, sizeof(message)-1);
 
