@@ -26,3 +26,36 @@ typedef struct _BITVECTOR {
 
 
 #endif
+
+
+
+
+// DEFINICION ALTERNATIVA, NO SE CON CUAL QUEDARME
+
+#ifdef __BITVECTOR2_H__
+
+#define BITSPER(T) (sizeof(T)*8)
+
+typedef struct _BITVECTOR {
+	int size;
+	BYTE data[1];
+} BITVECTOR, *PBITVECTOR;
+
+#define BitVector_Create(name, bsize)	struct _BITVECTOR_##name {\
+											int size; /* EN BITS */\
+											BYTE data[1 + (bsize)/BITSPER(BYTE)];\
+										} name = { bsize }
+
+
+#define BitVector_Size(bitvector)				((bitvector).size)
+#define _BitVector_GetElement(bitvector, index) ((bitvector).data[(index) / BITSPER(BYTE)]) // ME DA LA REFERENCIA!
+#define _BitVector_Mask(index)					(1 << ((index) % BITSPER(BYTE))) // MASCARA NECESARIA PARA ACCEDER AL BIT DENTRO DEL BYTE
+
+#define BitVector_Test(bitvector, index)		((_BitVector_GetElement(bitvector, index) >> (index % BITSPER(BYTE))) & 1)
+#define BitVector_Set(bitvector, index)			(_BitVector_GetElement(bitvector, index) |= _BitVector_Mask(index))
+#define BitVector_Reset(bitvector, index)		(_BitVector_GetElement(bitvector, index) &= ~_BitVector_Mask(index))
+
+#define BitVector_Box(pBitVector) ((BitVector *) (pBitVector))
+
+
+#endif
