@@ -38,13 +38,18 @@ PL_LIST_NODE *pAuxNode;
 return retval;
 }
 
-/*
-void *PL_LIST_Value(PL_LIST *List) { return (*List)->Value; }
-PL_LIST PL_LIST_First(PL_LIST *List) { return (*List); }
-PL_LIST PL_LIST_Next(PL_LIST *List) { return (*List)->Next; }
-BOOL PL_LIST_Empty(PL_LIST *List) { return (*List) == NULL; }
-*/
 
+// VACIAR TODA LA LISTA
+void PL_LIST_Clear(PL_LIST *List)
+{
+	
+	while(!PL_LIST_Empty(List))
+	{
+		PL_LIST_Remove(List);
+	}
+
+
+}
 
 
 /*

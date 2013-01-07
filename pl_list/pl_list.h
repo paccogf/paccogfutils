@@ -33,7 +33,7 @@ typedef struct _PL_LIST_NODE {
 
 PL_LIST PL_LIST_Add(PL_LIST *List, void *Value);
 void * PL_LIST_Remove(PL_LIST *List);
-
+void PL_LIST_Clear(PL_LIST *List);
 
 #ifdef __CPLUSPLUS
 }
