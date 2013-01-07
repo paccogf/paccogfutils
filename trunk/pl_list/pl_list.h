@@ -1,5 +1,17 @@
 #ifndef _PL_LIST_H_
+#define _PL_LIST_H_
 
+#include <stdio.h>
+
+
+#ifdef __CPLUSPLUS
+
+extern "C"
+{
+
+#endif
+
+	
 /***************************** INTERFACE ************************************/
 
 typedef struct _PL_LIST_NODE PL_LIST_NODE;
@@ -21,6 +33,11 @@ typedef struct _PL_LIST_NODE {
 
 PL_LIST PL_LIST_Add(PL_LIST *List, void *Value);
 void * PL_LIST_Remove(PL_LIST *List);
+
+
+#ifdef __CPLUSPLUS
+}
+#endif
 
 
 #endif
