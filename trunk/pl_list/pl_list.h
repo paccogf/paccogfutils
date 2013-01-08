@@ -5,10 +5,8 @@
 
 
 #ifdef __CPLUSPLUS
-
 extern "C"
 {
-
 #endif
 
 	
@@ -23,7 +21,9 @@ typedef struct _PL_LIST_NODE {
 
 } PL_LIST_NODE, *PL_LIST;
 
-
+/*
+** OPERACIONES SIMPLES, LAS IMPLEMENTAMOS COMO MACRO
+*/
 #define PL_LIST_Value(List)	((*(List))->Value)
 #define PL_LIST_First(List) (*(List))
 #define PL_LIST_Next(List)	((*(List))->Next)
@@ -31,6 +31,9 @@ typedef struct _PL_LIST_NODE {
 #define PL_LIST_Init(List)  ((*(List)) = NULL)
 
 
+/*
+** OPERACIONES UN POCO MAS COMPLEJAS, LAS IMPLEMENTAMOS COMO FUNCIONES
+*/
 PL_LIST PL_LIST_Add(PL_LIST *List, void *Value);
 void * PL_LIST_Remove(PL_LIST *List);
 void PL_LIST_Clear(PL_LIST *List);
