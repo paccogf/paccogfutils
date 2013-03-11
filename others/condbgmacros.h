@@ -4,6 +4,55 @@
 #include <stdlib.h>
 #include <errno.h>
 
+/************************************ LOG *****************************************/
+#ifdef _PACODEBUG
+
+#define _DEFAULT_LOG_STREAM "CON"
+#define SetLogFile(filename) memcpy(_logfilename, filename, min(sizeof(_logfilename)-1, strlen(filename));
+#define Log(frmstr, ...) LogToFile(_logfilename, frmstr, __VA_ARGS__)
+
+static char _logfilename[MAX_PATH] = _DEFAULT_LOG_STREAM;
+
+void LogToFile(const char *filename, const char *frmstr, ...)
+{
+	FILE *fLog;
+	va_list va;
+
+
+	fLog=fopen(filename, "a");
+	if(fLog != NULL)
+	{	
+		va_start(va, frmstr);
+		vfprintf(fLog, frmstr, va);
+		va_end(va);
+
+		fclose(fLog); 
+	}
+}
+
+#endif // _PACODEBUG
+/**********************************************************************************/
+
+
+/*************************** STACK TRACE ******************************************/
+#ifdef _STACK_TRACE_H_
+#define ST_SIZE (256)
+struct
+{
+	int top;
+	char *table[ST_SIZE];
+
+} _STACKTRACE = { ST_SIZE, NULL };
+
+
+#define ST_BEGIN		{ _STACKTRACE.table[--_STACKTRACE.top]=__FUNCTION__; }
+#define ST_END			{ _STACKTRACE.top++; }
+#define PRINT_STACK()	{ int i; for(i=_STACKTRACE.top; i<ST_SIZE; i++) printf("%s\n", _STACKTRACE.table[i]); }
+#define ST_RETURN		ST_END 
+#endif // _STACK_TRACE_H_
+/**********************************************************************************/
+
+
 ////////////////////////////// SOLO PARA APLICACIONES EN MODO CONSOLA ///////////////////
 
 
