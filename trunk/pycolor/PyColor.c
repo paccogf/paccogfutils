@@ -68,6 +68,7 @@ static void settextcolor(WORD color)
 //////////////////////////////////////////////////////////////////////////////////////
 // PYTHON ENVIRONMENT FUNCTIONS
 //////////////////////////////////////////////////////////////////////////////////////
+/*
 static void PyColor_DefineColorCtes()
 {
 	PyRun_SimpleString("pycolor.FOREGROUND_BLUE =		0x0001");
@@ -78,8 +79,22 @@ static void PyColor_DefineColorCtes()
 	PyRun_SimpleString("pycolor.BACKGROUND_GREEN =		0x0020");
 	PyRun_SimpleString("pycolor.BACKGROUND_RED =		0x0040");
 	PyRun_SimpleString("pycolor.BACKGROUND_INTENSITY =	0x0080");
-}
 
+	// CYAN, MAGENTA, YELLOW
+	PyRun_SimpleString("pycolor.FOREGROUND_YELLOW =		pycolor.FOREGROUND_GREEN | pycolor.FOREGROUND_RED");
+	PyRun_SimpleString("pycolor.FOREGROUND_CYAN =		pycolor.FOREGROUND_GREEN | pycolor.FOREGROUND_BLUE");
+	PyRun_SimpleString("pycolor.FOREGROUND_MAGENTA =	pycolor.FOREGROUND_RED   | pycolor.FOREGROUND_BLUE");
+	PyRun_SimpleString("pycolor.BACKGROUND_YELLOW =		pycolor.BACKGROUND_GREEN | pycolor.BACKGROUND_RED");
+	PyRun_SimpleString("pycolor.BACKGROUND_CYAN =		pycolor.BACKGROUND_GREEN | pycolor.BACKGROUND_BLUE");
+	PyRun_SimpleString("pycolor.BACKGROUND_MAGENTA =	pycolor.BACKGROUND_RED	 | pycolor.BACKGROUND_BLUE");
+
+	PyRun_SimpleString("pycolor.FOREGROUND_GRAY =		pycolor.FOREGROUND_GREEN | pycolor.FOREGROUND_MAGENTA");
+	PyRun_SimpleString("pycolor.FOREGROUND_WHITE =		pycolor.FOREGROUND_GRAY | pycolor.FOREGROUND_INTENSITY");
+
+	PyRun_SimpleString("pycolor.BACKGROUND_GRAY =		pycolor.BACKGROUND_GREEN | pycolor.BACKGROUND_MAGENTA");
+	PyRun_SimpleString("pycolor.BACKGROUND_WHITE =		pycolor.BACKGROUND_GRAY | pycolor.BACKGROUND_INTENSITY");
+}
+*/
 
 static PyObject* PyColor_getcolor(PyObject *self, PyObject *args)
 {
@@ -103,14 +118,14 @@ DWORD color;
 return Py_BuildValue("");
 }
 
-
+/*
 static void PyColor_InitColorStackStuff()
 {
 	PyRun_SimpleString("pycolor.colorstack = list()");
 	PyRun_SimpleString("pycolor.pushcolor = lambda: pycolor.colorstack.insert(0, pycolor.getcolor())");
 	PyRun_SimpleString("pycolor.popcolor = lambda: pycolor.setcolor(pycolor.colorstack.pop())");
 }
-
+*/
 
 
 static PyMethodDef PyColorMethods[] = 
@@ -126,14 +141,8 @@ static PyMethodDef PyColorMethods[] =
 //////////////////////////////////////////////////////////////////////////////////////
 // MODULE INITIALIZATION
 //////////////////////////////////////////////////////////////////////////////////////
-PyMODINIT_FUNC initpycolor(void)
+PyMODINIT_FUNC init_pycolor(void)
 {
-    Py_InitModule("pycolor", PyColorMethods);
-
-	PyRun_SimpleString("import pycolor");
-
-	PyColor_DefineColorCtes();
-
-	PyColor_InitColorStackStuff();
+    Py_InitModule("_pycolor", PyColorMethods);
 }
 
