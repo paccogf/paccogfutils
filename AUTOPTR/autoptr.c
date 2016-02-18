@@ -1,11 +1,4 @@
-
-
-#define AUTOPTR_BEGIN() LIST AUTOPTRNAME = LIST_Init()
-#define AUTOMALLOC(size) autoptr_add(AUTOPTRNAME, Pmalloc(size, 0))
-#define AUTOPTR(ptr)	autoptr_add(AUTOPTRNAME, ptr)
-#define AUTOPTR_END()	autoptr_end(AUTOPTRNAME)
-#define RETURN(x)		AUTOPTR_END(); return x
-
+#include "autoptr.h"
 
 
 void *autoptr_add(LIST autolist, void *ptr)
@@ -22,28 +15,35 @@ void autoptr_end(LIST autoptrlist)
 	while(!LIST_Empty(autoptrlist))
 	{   
 		void *todelete = LIST_Pop(autoptrlist);
-		Pfree(todelete);
+		free(todelete);
 	}
 
 	LIST_Finalize(autoptrlist);
 }
 
-
-
-
-void Test()
+/*
+void AUTOPTR_Test()
 {
-
 AUTOPTR_BEGIN();
 
-char *hola = (char *)AUTOMALLOC(10, 0);
+char *hola = (char *)AUTOMALLOC(10);
 strcpy(hola, "hola");
-char *adios = (char *)AUTOMALLOC(10, 0);
+char *adios = (char *)AUTOMALLOC(10);
 strcpy(adios, "adios");
 
-RETURN(0);
-
-
-
+AUTOPTR_END();
 }
 
+int AUTOPTR_Test2()
+{
+AUTOPTR_BEGIN();
+
+char *hola = (char *)AUTOMALLOC(10);
+strcpy(hola, "hola");
+char *adios = (char *)AUTOMALLOC(10);
+strcpy(adios, "adios");
+
+RETURN(2);
+}
+
+*/

@@ -1,40 +1,22 @@
 #include <stdio.h>
 #include <windows.h>
+#define _LIST_C_
+#include "LIST.h"
+
+#define _NEW(T) (T *)malloc(sizeof(T))
+#define _DELETE(p) free(p)
+//#define  LIST_Push(pList, pElement) _LIST_Push(pList, (void *)pElement)
 
 
-#define Pfree free
-#define Pmalloc(a, b) malloc(a)
 
-
-#define _NEW(T) (T *)Pmalloc(sizeof(T), 0)
-#define _DELETE(p) Pfree(p)
-#define NEWNODE() NEW(LISTNODE)
-
-
-typedef struct _LISTNODE LISTNODE;
-
-typedef struct _LISTNODE
-{
-	void *pValue;
-	LISTNODE *pNext;
-
-} LISTNODE, *PLISTNODE;
-
-typedef struct _LIST
-{
-	LISTNODE *pFirst;
-
-} LIST, *PLIST;
-
-
-BOOL LIST_Empty(LIST *pList)
+BOOL LIST_Empty(LIST pList)
 {
 	return pList->pFirst == NULL;
 }
 
-LIST * LIST_Init()
+LIST LIST_Init()
 {
-	LIST * retval = _NEW(LIST);
+	LIST retval = _NEW(struct _LIST);
 	if(retval != NULL)
 	{
 		retval->pFirst = NULL;
@@ -43,13 +25,13 @@ LIST * LIST_Init()
 }
 
 
-void LIST_Finalize(LIST *pList)
+void LIST_Finalize(LIST pList)
 {
 	_DELETE(pList);
 }
 
-#define  LIST_Push(pList, pElement) _LIST_Push(pList, (void *)pElement)
-void _LIST_Push(LIST *pList, void *pElement)
+
+void _LIST_Push(LIST pList, void *pElement)
 {
 	LISTNODE *pAux = _NEW(LISTNODE);
 	pAux->pNext = pList->pFirst;
@@ -58,7 +40,7 @@ void _LIST_Push(LIST *pList, void *pElement)
 }
 
 
-void * LIST_Pop(LIST *pList)
+void * LIST_Pop(LIST pList)
 {
 	LISTNODE *pAux = pList->pFirst;
 	void *retval = pAux->pValue;
@@ -68,9 +50,9 @@ void * LIST_Pop(LIST *pList)
 return retval;
 }
 
-typedef LISTNODE *LIST_ITERATOR;
 
-LIST_ITERATOR LIST_ITERATOR_Begin(LIST *pList)
+
+LIST_ITERATOR LIST_ITERATOR_Begin(LIST pList)
 {
 	return pList->pFirst;
 }
@@ -95,8 +77,7 @@ BOOL LIST_ITERATOR_End(LIST_ITERATOR pItr)
 
 /*
 
-
-void SimpleTest()
+void ListTest()
 {
 	LIST List = LIST_Init();
 
@@ -124,7 +105,4 @@ void SimpleTest()
 	LIST_Finalize(List);
 
 }
-
-
-
 */
