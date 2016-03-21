@@ -32,6 +32,14 @@
 // log2 PARA WINDOWS, EN LINUX YA ES UNA FUNCION DE libc
 #ifndef log2
 #define log2(x) (log10(x)/log10(2))
+
+#define __TOKEN_PASTE(a, b) a##b
+#define _TOKEN_PASTE(a, b) __TOKEN_PASTE(a, b)
+#define TOKEN_PASTE(a, b) _TOKEN_PASTE(a, b)
+
+#define _INT2STR(n) #n
+#define INT2STR(n) _INT2STR(n)
+
 #endif
 
 
