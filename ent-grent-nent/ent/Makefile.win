@@ -1,0 +1,33 @@
+# Project: Ent
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o entropia.o $(RES)
+LINKOBJ  = main.o entropia.o $(RES)
+LIBS =  -L"d:/util/Dev-Cpp/lib"  
+INCS =  -I"d:/util/Dev-Cpp/include" 
+CXXINCS =  -I"d:/util/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"d:/util/Dev-Cpp/include/c++/3.4.2/backward"  -I"d:/util/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"d:/util/Dev-Cpp/include/c++/3.4.2"  -I"d:/util/Dev-Cpp/include" 
+BIN  = Ent.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Ent.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Ent.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+entropia.o: entropia.c
+	$(CC) -c entropia.c -o entropia.o $(CFLAGS)

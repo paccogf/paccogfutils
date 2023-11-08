@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------
+
+#ifndef TProgressDlgH
+#define TProgressDlgH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Buttons.hpp>
+#include <ComCtrls.hpp>
+//---------------------------------------------------------------------------
+class TProgressDlg : public TForm
+{
+__published:	// IDE-managed Components
+        TProgressBar *ProgressBar;
+        TBitBtn *BitBtn1;
+        TButton *Button1;
+        void __fastcall BitBtn1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TProgressDlg(TComponent* Owner);
+   int  __fastcall InitCalculus();     
+   void __fastcall SetProgress(int progress);
+   void __fastcall EndProgress();
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TProgressDlg *ProgressDlg;
+//---------------------------------------------------------------------------
+
+// LA FUNCION CALLBACK A IMPLEMENTAR POR EL CONTADOR DE PROGRESO ES ALGO ASI COMO:
+// TProgressCounter.SetProgress(int percent);
+typedef  TProgressDlg TProgressCounter;
+
+#endif
